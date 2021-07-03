@@ -1,5 +1,9 @@
 # Deep Learning Course
 
+Este repositório contém os notebook's apresentados em sala pelo professor Luan Porfirio e Silva, no curso de pós-graduação de Data Science da FURB. O projeto do professor, pode ser acessado por meio deste [link][github-deeplearning-furb].
+
+Além disto, o arquivo `Trabalho.ipynb` refere ao trabalho final da disciplina, detalhado abaixo.
+
 ## Trabalho Final - Classificação de textos para análise de sentimentos
 
 Base de dados 
@@ -16,6 +20,23 @@ Para isso, será utilizado a base de dados [IMDb](http://ai.stanford.edu/~amaas/
 Sugestões:
 - Explorar a base de dados nas células iniciais do notebook para ter um melhor entendimento do problema, distribuição dos dados, etc
 - Após desenvolver a estrutura de classificação, é indicado fazer uma busca de hiperparâmetros e comparar os resultados obtidos em diferentes situações
+
+
+## Setup do Projeto
+
+### Criação de venv e instalação de dependências
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Download do modelo com melhores resultados
+
+É possível fazer download do modelo com melhores parâmetros a partir deste link.
+
+Após o download, crie uma pasta no diretório raíz do projeto com o seguinte nome: `models` e cole o arquivo baixado para esta pasta.
 
 ## Experimentos Realizados
 
@@ -62,9 +83,6 @@ Foi utilizada uma rede LSTM, cujo fluxo base pode ser descrito como:
     14.2. Caso uma palavra digitada pelo usuário não seja reconhecida pelo array de tokens de palavras, é considerado o valor 0, que considera uma palavra inexistente/inválida
 
 
-[tutorial-base-medium]: https://towardsdatascience.com/sentiment-analysis-using-lstm-step-by-step-50d074f09948
-
-
 ### Configurações experimentadas
 
 Para os testes, por conta do tempo demandando pelo algoritmo, foram realizados 2 tipos de teste:
@@ -94,3 +112,7 @@ A ideia de realizar o teste parcial é apenas ter uma noção de desempenho e mo
 
 ### Conclusão
 
+
+
+[github-deeplearning-furb]: https://github.com/luanps/furb_deeplearning
+[tutorial-base-medium]: https://towardsdatascience.com/sentiment-analysis-using-lstm-step-by-step-50d074f09948
