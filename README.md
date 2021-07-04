@@ -8,7 +8,7 @@ Além disto, o arquivo `Trabalho.ipynb` refere ao trabalho final da disciplina, 
 
 Base de dados 
 
-Istruções:
+Instruções:
 - O objetivo deste trabalho é criar um modelo binário de aprendizado de máquina para classificação de textos. 
 Para isso, será utilizado a base de dados [IMDb](http://ai.stanford.edu/~amaas/data/sentiment/), que consiste de dados textuais de críticas positivas e negativas de filmes
 - Uma vez treinado, o modelo deve ter uma função `predict` que recebe uma string como parâmetro e retorna o valor 1 ou 0, aonde 1 significa uma crítica positiva e 0 uma crítica negativa
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ### Download do modelo com melhores resultados
 
-É possível fazer download do modelo com melhores parâmetros a partir deste link.
+É possível fazer download do modelo com melhores parâmetros a partir deste [link][link-download-modelo-predict].
 
 Após o download, crie uma pasta no diretório raíz do projeto com o seguinte nome: `models` e cole o arquivo baixado para esta pasta.
 
@@ -97,9 +97,7 @@ A ideia de realizar o teste parcial é apenas ter uma noção de desempenho e mo
 | Número do teste | Batch Size | Quantidade de layers | Tamanho de entrada das camadas escondidas | Dropout | Test Loss | Test Accuracy | Quantidade de épocas de treinamento  |
 |-----------------|------------|----------------------|-------------------------------------------|---------|-----------|---------------|--------------------------------------|
 | 1               | 50         | 2                    | 256                                       | 0.3     | 0.607     | 0.737         | 2                                    |
-|                 |            |                      |                                           |         |           |               |                                      |
-|                 |            |                      |                                           |         |           |               |                                      |
-
+| 2               | 64         | 4                    | 128                                       | 0.3     | 1.062     | 0.783         | 10                                   |
 
 #### Testando com parte do dataset
 
@@ -112,7 +110,12 @@ A ideia de realizar o teste parcial é apenas ter uma noção de desempenho e mo
 
 ### Conclusão
 
+Avaliando todos os resultados, é possível observar que, testando com todo o dataset, foi possível obter melhores métricas, apesar da quantidade limitade de épocas de treinamento.
 
+O melhor modelo de todos é o número 2, o qual ficou com acurácia de `78,3%`. 
+
+O resultado, ainda poderia ser mais otimizado, adicionando mais épocas e efetuando mais ajustes de hiperparâmetros.
 
 [github-deeplearning-furb]: https://github.com/luanps/furb_deeplearning
+[link-download-modelo-predict]: https://drive.google.com/file/d/1dxRgR1EJYKPusJj-86NB40k9LenbXcEI/view?usp=sharing
 [tutorial-base-medium]: https://towardsdatascience.com/sentiment-analysis-using-lstm-step-by-step-50d074f09948
